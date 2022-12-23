@@ -348,4 +348,4 @@ git clone https://github.com/Nishkarsh01/2d-endless-runner-game-unity
 ```
 or download the zip file from github.
 
-After extracting the files, 
+After extracting the files, you can play the game!
