@@ -1,8 +1,15 @@
+# Dodge the obstacle game
+A 2d endless runner game created using C# and Unity Game Engine.
+
+## Developed By
+> Nishkarsh Dubb
+
+## Screenshot and Demo Video
+> Nishkarsh Dubb
+![Website Screenshot](./game.png)
 Link to the Demo Video: https://www.dropbox.com/s/j2ntg6zorjh5p31/bandicam%202022-12-06%2022-23-52-768.mp4?dl=0
 
-![Website Screenshot](./game.png)
-
-External Resources used to develop the project: 
+## External Resources used to develop the project: 
 
 1) https://youtu.be/Yb3isH6j-iU 
 2) https://www.youtube.com/watch?v=xcmYsc2BY-U 
@@ -13,29 +20,27 @@ External Resources used to develop the project:
 7) https://www.youtube.com/watch?v=RYw8lAI-_Y0
 
 
-The Game:
+## Understanding the Game:
 
 The name of the game I created is “Dodge the Obstacle”. This is a 2d game created using C# and Unity Game Engine.
 
-Game Controls:
+## Game Controls:
 
 1) Use Up-Arrow to move vertically up.  
 2) Use Down-Arrow to move vertically down.  
 
-Aim of the game:
+## Aim of the game:
 
 In this game, the main game object is an airplane. As the airplane flies through the sky, it encounters some alien spaceships. The aim of the player in this game is to avoid hitting the spaceships.
 
- 
 
-
-Rules of the game:
+## Rules of the game:
 
 1) In order for the player to progress through this game, the user must avoid hitting spaceships (obstacles). 
 2) As the game progresses and the player stays in the game without hitting the spaceships, the score increases. The score increases by 1 as the deltaTime increases (deltaTime= deltaTime is simply the time in seconds between the last frame and the current frame).
 3) As soon as the player hits the obstacle (the spaceship) the game ends (collision detection at play using the 2D collider game object).
 
-The elements of the game:
+## The elements of the game:
 
 0) The game manager
 
@@ -52,8 +57,6 @@ The elements of the game:
 7) The Particle system (particle effect animation)
 
 The three sprites that have been used in this project were: airplane, alien spaceship (obstacle), and background (that loops).
-
- 
 
 How did the elements move?
 
@@ -331,3 +334,18 @@ For the menu, the UI element, panel has also been used, I also attempted to use 
 Additionally, I have also used background music, added sound effects as well as used the particle system effect (animation). https://youtu.be/U3sT-T5bKX4?t=1425 
 
 All in all, it was a fun project, and I learnt a lot!
+
+## Developed using
+* C#
+* Unity Game Engine
+
+## Setup:
+
+#### Clone this repository:
+
+```bash
+git clone https://github.com/Nishkarsh01/2d-endless-runner-game-unity
+```
+or download the zip file from github.
+
+After extracting the files, 
