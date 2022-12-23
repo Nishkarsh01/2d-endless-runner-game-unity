@@ -5,7 +5,7 @@ A 2d endless runner game created using C# and Unity Game Engine.
 > Nishkarsh Dubb
 
 ## Screenshot and Demo Video
-> Nishkarsh Dubb
+
 ![Website Screenshot](./game.png)
 Link to the Demo Video: https://www.dropbox.com/s/j2ntg6zorjh5p31/bandicam%202022-12-06%2022-23-52-768.mp4?dl=0
 
