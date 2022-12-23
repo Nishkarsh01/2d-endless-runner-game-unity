@@ -1,5 +1,7 @@
 Link to the Demo Video: https://www.dropbox.com/s/j2ntg6zorjh5p31/bandicam%202022-12-06%2022-23-52-768.mp4?dl=0
 
+![Website Screenshot](./game.png)
+
 External Resources used to develop the project: 
 
 1) https://youtu.be/Yb3isH6j-iU 
