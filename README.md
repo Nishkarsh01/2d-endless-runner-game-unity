@@ -44,13 +44,13 @@ In this game, the main game object is an airplane. As the airplane flies through
 7) The Particle system (particle effect animation)
 The three sprites that have been used in this project were: airplane, alien spaceship (obstacle), and background (that loops).
 
-# How did the elements move?
+## How did the elements move?
 In the game, I have allowed the user to use dynamic (vertical movements) on the Player game object that uses the player sprite (airplane). For our player game object to move, I created a c# script named “Player”. In it, I use a float variable called speedOfPlayer to control the player's speed. I also used the rigidBody2D component for this 2D sprite. This enabled me to put the sprite under the control of the physics engine. I set properties like gravity to 0, so that my airplane appeared such that it was in midair.
 
-# What is rigiBody2D component-> 
+## What is rigiBody2D component-> 
 Adding a Rigidbody2D component to a sprite puts it under the control of the physics engine. By itself, this means that the sprite will be affected by gravity and can be controlled from scripts using forces. https://docs.unity3d.com/ScriptReference/Rigidbody2D.html 
 
-# Let’s take a brief look at the Player C# script:
+## Let’s take a brief look at the Player C# script:
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
 }
 ```
 
-# Now let’s take a brief look at the game manager object…
+## Now let’s take a brief look at the game manager object…
 The game manager object enables us to have the camera movement. In this game we want the camera to be continuously moving forward. Further, I made the player object, and similarly other objects as the child of the game manager object. This is because I want it to look like the player is moving forward. But in reality, the player is still there, the only thing that is moving is our camera. To accomplish this, I create a C# script called backgroundMovement.cs
 
 ```
@@ -110,7 +110,7 @@ public class backgroundMovement : MonoBehaviour
 
 In this script, we did not need a start function, thus I removed it. The variable camera speed dictates how fast our camera will be moving. In the update function, I continuously change the x-position of the camera. Notice in Vector3 (x, y, z) the value of y and z co-ordinates is 0, because we don’t want to change any of this position, we only want to make changes to the x-position. Then, I attached this script to gameManager object and set the speed.
 
-# Looping Background:
+## Looping Background:
 For the looping background I created a 3D game object called quad. 
 Link: https://docs.unity3d.com/Manual/Example-CreatingaBillboardPlane.html 
 I used the background sprite with the background game object and made it cover the entire screen. The background game object is the child of the gameManager object, since we want our background to move with the camera. For the background to have a loop effect, I created a C# script named loopBg.cs
@@ -137,11 +137,11 @@ public class loopBg : MonoBehaviour
 
 The variable backgroundSpeed dictates how fast our background will be moving. We have also created a Renderer type variable named backgroundRenderer. For the x-cordinate we have a changing value, whereas for y-cordinate we have it set as 0 in Vector2.
 
-# Boundaries (restricting the movement of the airplane to the screen):
+## Boundaries (restricting the movement of the airplane to the screen):
 I had also created boundaries that would restrict the vertical movement of the player to the screen boundaries. To achieve this, I created some box colliders to prevent our player from moving out of the screen. I created a game object called Borders. Under the borders game object, I had two other game objects named TopBorder and BottomBorder. I made sure the top and bottom box colliders covered the entire screen horizontally (throughout x-axis at top as well as bottom of the screen). The borders game object is the child of the game manager object so that, the border moves along with the camera.
 
 
-# Spawning Spaceship Obstacles:
+## Spawning Spaceship Obstacles:
 For the obstacles I created an obstacle game object and used it with the obstacle sprite. I made obstacle object a prefab. A prefab allows us to create, configure and store a gameObject complete with all its components, property values, etc. as resuable asset. 
 Unity 2D Game Design Tutorial 6 - Prefabs - Bing video
 
@@ -182,7 +182,7 @@ public class spawnobstacles : MonoBehaviour
 ```
 
 
-# Let’s take a quick look at the spawnObstacles.cs script:
+## Let’s take a quick look at the spawnObstacles.cs script:
 Here maximum and minimum variable values are for obstacles so that they don’t spawn outside our screen.
 
 ```
@@ -223,7 +223,7 @@ public class spawnobstacles : MonoBehaviour
  
 the gameobject obstacle variable consists of the obstacle that we want to spawn. The four float variables maximum, minimum, maximumY, minimumY, allow our obstacles to spawn within the minimum and maximum range for each axis.  The time between spawn dictate the time between spawns and spawnTime is the spawn time. Spawn() method is used to randomly spawn the objects at different positions, whereas in update, we call the spawn method. 
 
-# Destroying objects and game over functionality:
+## Destroying objects and game over functionality:
 When any of the obstacle game object hits the left end of the screen it is destroyed, else if it touches the plane, the player game object is destroyed. When it hits the plane, the obstacle triggers the OnTriggerEnter2D function. The Obstacle is using 2D circle collider object as well as rigid2D object.
 
 ```
@@ -255,7 +255,7 @@ public class Obstacle : MonoBehaviour
 ```
 
 
-# Panel that gets displayed on hitting an obstacle:
+## Panel that gets displayed on hitting an obstacle:
 ```
 using System.Collections;
 using System.Collections.Generic;
@@ -282,7 +282,7 @@ public class gameOver : MonoBehaviour
 }
 ```
 
-# Managing the score
+## Managing the score
 The code bewlo illustrates how the score is being updated. The score is being increased with the passage of deltaTime and as long the player does not hit the obstacle. The text is displayed using the UI element text.
 
 ```
