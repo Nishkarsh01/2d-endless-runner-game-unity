@@ -47,7 +47,7 @@ The three sprites that have been used in this project were: airplane, alien spac
 ## How did the elements move?
 In the game, I have allowed the user to use dynamic (vertical movements) on the Player game object that uses the player sprite (airplane). For our player game object to move, I created a c# script named “Player”. In it, I use a float variable called speedOfPlayer to control the player's speed. I also used the rigidBody2D component for this 2D sprite. This enabled me to put the sprite under the control of the physics engine. I set properties like gravity to 0, so that my airplane appeared such that it was in midair.
 
-## What is rigiBody2D component-> 
+## What is rigidBody2D component-> 
 Adding a Rigidbody2D component to a sprite puts it under the control of the physics engine. By itself, this means that the sprite will be affected by gravity and can be controlled from scripts using forces. https://docs.unity3d.com/ScriptReference/Rigidbody2D.html 
 
 ## Let’s take a brief look at the Player C# script:
